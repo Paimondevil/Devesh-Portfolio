@@ -36,7 +36,7 @@ const items = [
     img: "/p5.jpg",
     title: "Face Forward: Animated Portfolio Website for a Creative Professional 🚧",
     desc: "Created a custom animated portfolio for a design-focused friend, showcasing projects, personality, and interactive flair. Balanced visual storytelling with intuitive UX to help them stand out in the creative industry. Lightweight, responsive, and built with scalable design in mind.",
-    link: "https://devesh-portfolio.vercel.app/",
+    link: "https://devesh-portfolio-chi.vercel.app/",
   },
 ];
 
