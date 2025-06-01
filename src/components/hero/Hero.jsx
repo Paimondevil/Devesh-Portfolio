@@ -48,7 +48,7 @@ const Hero = () => {
         >
           Hey There,
           <br />
-          <span>I'm Robert!</span>
+          <span>I'm Devesh!</span>
         </motion.h1>
         {/* AWARDS */}
         <motion.div
@@ -57,15 +57,39 @@ const Hero = () => {
           animate="animate"
           className="awards"
         >
-          <motion.h2 variants={awardVariants}>Top Rated Designer</motion.h2>
+          <motion.h2 variants={awardVariants}>Data Engineer / Software Developer</motion.h2>
           <motion.p variants={awardVariants}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Check out my work & skills:
           </motion.p>
           <motion.div variants={awardVariants} className="awardList">
-            <motion.img variants={awardVariants} src="/award1.png" alt="" />
-            <motion.img variants={awardVariants} src="/award2.png" alt="" />
-            <motion.img variants={awardVariants} src="/award3.png" alt="" />
-          </motion.div>
+  <motion.a 
+    variants={awardVariants} 
+    href="https://github.com/Paimondevil" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <motion.img variants={awardVariants} src="/award1.png" alt="Award 1" />
+  </motion.a>
+
+        <motion.a 
+          variants={awardVariants} 
+          href="https://hackerrank.com/GAUTAMDEVESH140?hr_r=1" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <motion.img variants={awardVariants} src="/award2.png" alt="Award 2" />
+        </motion.a>
+
+        <motion.a 
+          variants={awardVariants} 
+          href="https://leetcode.com/Devesh_Gautam" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <motion.img variants={awardVariants} src="/award3.png" alt="Award 3" />
+        </motion.a>
+      </motion.div>
+
         </motion.div>
         {/* SCROLL SVG */}
         <motion.a
@@ -113,17 +137,17 @@ const Hero = () => {
           animate="animate"
           className="follow"
         >
-          <motion.a variants={followVariants} href="/">
+          <motion.a variants={followVariants} href="https://instagram.com/devesh._.gautam">
             <img src="/instagram.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="/">
-            <img src="/facebook.png" alt="" />
+          <motion.a variants={followVariants} href="mailto:29deveshgautam@gmail.com">
+            <img src="/email.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="/">
-            <img src="/youtube.png" alt="" />
+          <motion.a variants={followVariants} href="tel:+19023382913">
+            <img src="/phone.png" alt="" />
           </motion.a>
           <motion.div variants={followVariants} className="followTextContainer">
-            <div className="followText">FOLLOW ME</div>
+            <div className="followText">Find Me Online.</div>
           </motion.div>
         </motion.div>
         {/* BUBBLE */}
@@ -134,16 +158,16 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="certificate"
         >
-          <img src="/certificate.png" alt="" />
-          LMA CERTIFICED
+          <img src="/rating.png" alt="" />
+          HackerRank
           <br />
-          PROFESSIONAL
+          5-Star Gold Badge
           <br />
-          UI DESIGNER
+          Problem Solving
         </motion.div>
         {/* CONTACT BUTTON */}
         <motion.a
-          href="/#contact"
+          href="#contact"
           className="contactLink"
           animate={{
             x: [200, 0],
@@ -163,18 +187,18 @@ const Hero = () => {
             }}
           >
             <svg viewBox="0 0 200 200" width="150" height="150">
-              <circle cx="100" cy="100" r="90" fill="pink" />
+              <circle cx="100" cy="100" r="90" fill="#2f204e" />
               <path
                 id="innerCirclePath"
                 fill="none"
                 d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
               />
-              <text className="circleText">
-                <textPath href="#innerCirclePath">Hire Now •</textPath>
+              <text className="circleText" fill="#ffff">
+                <textPath href="#innerCirclePath">Get in Touch •</textPath>
               </text>
-              <text className="circleText">
-                <textPath href="#innerCirclePath" startOffset="44%">
-                  Contact Me •
+              <text className="circleText" fill="#ffff">
+                <textPath href="#innerCirclePath" startOffset="53%">
+                  Reach Out •
                 </textPath>
               </text>
             </svg>
@@ -185,7 +209,7 @@ const Hero = () => {
                 width="50"
                 height="50"
                 fill="none"
-                stroke="black"
+                stroke="white"
                 strokeWidth="2"
               >
                 <line x1="6" y1="18" x2="18" y2="6" />

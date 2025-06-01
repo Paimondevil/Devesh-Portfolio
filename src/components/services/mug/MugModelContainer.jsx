@@ -11,7 +11,7 @@ const MugModelContainer = () => {
           <MugModel />
         </Stage>
         <OrbitControls enableZoom={false} autoRotate />
-        <PerspectiveCamera position={[0, -1, 2]} zoom={0.7} makeDefault />
+        <PerspectiveCamera position={[-1,0,1.8]} zoom={0.7} makeDefault />
       </Suspense>
     </Canvas>
   );
