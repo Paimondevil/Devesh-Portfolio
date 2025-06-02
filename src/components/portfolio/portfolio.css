@@ -83,6 +83,7 @@
 
 .pText h1 {
   font-size: 56px;
+  text-shadow: 0 0 6px #b369ff, 0 0 12px #d57aff;
 }
 
 .pText p {
@@ -90,7 +91,8 @@
 }
 
 .pText button {
-  background-color: pink;
+  background-color: #2f204e;
+  color: #ffffff;
   padding: 12px;
   border-radius: 10px;
   border: none;

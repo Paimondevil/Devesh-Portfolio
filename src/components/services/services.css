@@ -14,6 +14,7 @@
 .sTitle {
   font-size: 88px;
   margin-bottom: 24px;
+  text-shadow: 0 0 6px #b369ff, 0 0 12px #d57aff;
 }
 
 .serviceList {
@@ -26,7 +27,7 @@
   width: 50%;
   padding: 30px;
   border-radius: 20px;
-  background-color: #2f213f;
+  background-color: rgb(18, 3, 84);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -56,16 +57,17 @@
 .serviceInfo h3 {
   font-size: 13px;
   font-weight: 300;
+  text-shadow: 0 0 6px #b369ff, 0 0 12px #d57aff;
 }
 
 .service:nth-child(1) .serviceIcon {
-  background-color: #dd4c62;
+  background-color: #b923fe;
 }
 .service:nth-child(2) .serviceIcon {
-  background-color: #025656;
+  background-color: #2e23fe;
 }
 .service:nth-child(3) .serviceIcon {
-  background-color: #6c5c0c;
+  background-color: #23a3fe;
 }
 
 .counterList {
@@ -84,12 +86,13 @@
 
 .counter h1 {
   font-size: 48px;
-  color: #dd4c62;
+  color: #f96565;
 }
 
 .counter p {
   font-size: 13px;
   width: 120px;
+  text-shadow: 0 0 6px #b369ff, 0 0 12px #d57aff;
 }
 
 @media (max-width: 1536px) {
