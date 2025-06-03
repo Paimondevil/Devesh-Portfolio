@@ -90,6 +90,15 @@ const Hero = () => {
         </motion.a>
       </motion.div>
 
+      <motion.a
+        variants={awardVariants}
+        href="/Devesh_Resume.pdf"
+        download
+        className="resumeButton"
+      >
+        My Resume 🛰️
+      </motion.a>
+
         </motion.div>
         {/* SCROLL SVG */}
         <motion.a
