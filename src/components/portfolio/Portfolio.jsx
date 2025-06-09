@@ -19,17 +19,17 @@ const items = [
   },
   {
     id: 3,
-    img: "/p3.jpg",
-    title: "VisualAlgo-Pro: Interactive Algorithm Visualizer 🚧",
-    desc: "Currently building a full-stack platform that brings algorithms to life through interactive visualizations. Designed to help users understand how sorting, searching, and graph algorithms work — in real time. Features animated step-by-step logic flow, user input controls, and a clean Flask + JavaScript stack. Launching soon with support for BFS, DFS, Dijkstra, and more. (Work in Progress 🚧)",
-    link: "https://github.com/Paimondevil/VisualAlgo-Pro",
-  },
-  {
-    id: 4,
     img: "/p2.jpg",
     title: "Data Hub: Encrypted File Sharing Platform",
     desc: "Developed a secure file-sharing app that encrypts content using a PIN-based Caesar cipher, enabling controlled access to uploaded files and summaries. Users can upload, lock, and retrieve data with confidence. Features include user authentication, PIN-protected decryption, and a lightweight Flask backend with a custom encryption engine.",
     link: "https://github.com/Paimondevil/Data-Hub",
+  },
+  {
+    id: 4,
+    img: "/p3.jpg",
+    title: "VisualAlgo-Pro: Interactive Algorithm Visualizer 🚧",
+    desc: "Currently building a full-stack platform that brings algorithms to life through interactive visualizations. Designed to help users understand how sorting, searching, and graph algorithms work — in real time. Features animated step-by-step logic flow, user input controls, and a clean Flask + JavaScript stack. Launching soon with support for BFS, DFS, Dijkstra, and more. (Work in Progress 🚧)",
+    link: "https://github.com/Paimondevil/VisualAlgo-Pro",
   },
   {
     id: 5,
