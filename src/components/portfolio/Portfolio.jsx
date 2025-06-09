@@ -11,11 +11,11 @@ const items = [
     link: "https://traffic-controll-neon.vercel.app/",
   },
   {
-    id: 4,
-    img: "/p2.jpg",
-    title: "Data Hub: Encrypted File Sharing Platform",
-    desc: "Developed a secure file-sharing app that encrypts content using a PIN-based Caesar cipher, enabling controlled access to uploaded files and summaries. Users can upload, lock, and retrieve data with confidence. Features include user authentication, PIN-protected decryption, and a lightweight Flask backend with a custom encryption engine.",
-    link: "https://github.com/Paimondevil/Data-Hub",
+    id: 2,
+    img: "/p4.png",
+    title: "GoodWill Enterprises: Animated Website for a Family-Owned Printing Business",
+    desc: "Designed and developed a sleek, animated web presence for a family-run printing company in India. Focused on bold visuals, service highlights, and smooth user interaction to build trust and accessibility. Built with performance and storytelling in mind — combining tradition with tech.",
+    link: "https://goodwill-enterprises.vercel.app",
   },
   {
     id: 3,
@@ -25,11 +25,11 @@ const items = [
     link: "https://github.com/Paimondevil/VisualAlgo-Pro",
   },
   {
-    id: 2,
-    img: "/p4.jpg",
-    title: "GoodWill Enterprises: Animated Website for a Family-Owned Printing Business",
-    desc: "Designed and developed a sleek, animated web presence for a family-run printing company in India. Focused on bold visuals, service highlights, and smooth user interaction to build trust and accessibility. Built with performance and storytelling in mind — combining tradition with tech. (Work in Progress 🚧)",
-    link: "https://goodwill-enterprises.vercel.app",
+    id: 4,
+    img: "/p2.jpg",
+    title: "Data Hub: Encrypted File Sharing Platform",
+    desc: "Developed a secure file-sharing app that encrypts content using a PIN-based Caesar cipher, enabling controlled access to uploaded files and summaries. Users can upload, lock, and retrieve data with confidence. Features include user authentication, PIN-protected decryption, and a lightweight Flask backend with a custom encryption engine.",
+    link: "https://github.com/Paimondevil/Data-Hub",
   },
   {
     id: 5,
