@@ -1,12 +1,6 @@
-// import Hero from "./components/hero/Hero";
-// import Services from "./components/services/Services";
-// import Portfolio from "./components/portfolio/Portfolio";
-// import Contact from "./components/contact/Contact";
-
 import { lazy, Suspense } from "react";
-import LazyLoad from "react-lazyload";
+import Hero from "./components/hero/Hero"; // Normal import – no lazy
 
-const Hero = lazy(() => import("./components/hero/Hero"));
 const Services = lazy(() => import("./components/services/Services"));
 const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
 const Contact = lazy(() => import("./components/contact/Contact"));
@@ -14,33 +8,25 @@ const Contact = lazy(() => import("./components/contact/Contact"));
 const App = () => {
   return (
     <div className="container">
+      {/* Hero loads immediately – no Suspense needed */}
+      <section id="home">
+        <Hero />
+      </section>
+
       <Suspense fallback={"loading..."}>
-        <LazyLoad height={"100vh"} offset={-100}>
-          <section id="home">
-            <Hero />
-          </section>
-        </LazyLoad>
+        <section id="services">
+          <Services />
+        </section>
       </Suspense>
+
       <Suspense fallback={"loading..."}>
-        <LazyLoad height={"100vh"} offset={-100}>
-          <section id="services">
-            <Services />
-          </section>{" "}
-        </LazyLoad>
+        <Portfolio /> {/* No <section> wrapper, matches original */}
       </Suspense>
+
       <Suspense fallback={"loading..."}>
-        <LazyLoad height={"600vh"} offset={-100}>
-          {/* <section id="#portfolio"> */}
-          <Portfolio />
-          {/* </section> */}{" "}
-        </LazyLoad>
-      </Suspense>
-      <Suspense fallback={"loading..."}>
-        <LazyLoad height={"100vh"} offset={-100}>
-          <section id="contact">
-            <Contact />
-          </section>{" "}
-        </LazyLoad>
+        <section id="contact">
+          <Contact />
+        </section>
       </Suspense>
     </div>
   );
