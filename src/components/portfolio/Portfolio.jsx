@@ -41,43 +41,27 @@ const items = [
 ];
 
 const imgVariants = {
-  initial: {
-    x: -500,
-    y: 500,
-    opacity: 0,
-  },
+  initial: { x: -500, y: 500, opacity: 0 },
   animate: {
     x: 0,
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
+    transition: { duration: 0.5, ease: "easeInOut" },
   },
 };
 
 const textVariants = {
-  initial: {
-    x: 500,
-    y: 500,
-    opacity: 0,
-  },
+  initial: { x: 500, y: 500, opacity: 0 },
   animate: {
     x: 0,
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-      staggerChildren: 0.05,
-    },
+    transition: { duration: 0.5, ease: "easeInOut", staggerChildren: 0.05 },
   },
 };
 
 const ListItem = ({ item }) => {
   const ref = useRef();
-
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
@@ -108,14 +92,6 @@ const Portfolio = () => {
   const [containerDistance, setContainerDistance] = useState(0);
   const ref = useRef(null);
 
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     const rect = ref.current.getBoundingClientRect();
-  //     setContainerDistance(rect.left);
-  //   }
-  // }, []);
-
-  // FIX: Re-calculate when screen size changes
   useEffect(() => {
     const calculateDistance = () => {
       if (ref.current) {
@@ -125,12 +101,23 @@ const Portfolio = () => {
     };
 
     calculateDistance();
-
     window.addEventListener("resize", calculateDistance);
-
     return () => {
       window.removeEventListener("resize", calculateDistance);
     };
+  }, []);
+
+  // ANCHOR FIX: scroll to exact pixel position when landing on #projects
+  useEffect(() => {
+    if (window.location.hash === "#projects") {
+      setTimeout(() => {
+        const el = ref.current;
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 500);
+    }
   }, []);
 
   const { scrollYProgress } = useScroll({ target: ref });
@@ -142,13 +129,12 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="portfolio" ref={ref}>
+    <div className="portfolio" id="projects" ref={ref}>
       <motion.div className="pList" style={{ x: xTranslate }}>
         <div
           className="empty"
           style={{
             width: window.innerWidth - containerDistance,
-            // backgroundColor: "pink",
           }}
         />
         {items.map((item) => (

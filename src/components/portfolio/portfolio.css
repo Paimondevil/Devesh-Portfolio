@@ -1,6 +1,7 @@
 .portfolio {
   height: 600vh;
   position: relative;
+  scroll-margin-top: -1px;
 }
 
 .pList {
@@ -134,3 +135,4 @@
     height: 50px;
   }
 }
+

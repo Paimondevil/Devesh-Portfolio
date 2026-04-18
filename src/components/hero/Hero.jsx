@@ -92,7 +92,7 @@ const Hero = () => {
 
       <motion.a
         variants={awardVariants}
-        href="/Devesh_Resume.pdf"
+        href="/Devesh Resume.pdf"
         download
         className="resumeButton"
       >
