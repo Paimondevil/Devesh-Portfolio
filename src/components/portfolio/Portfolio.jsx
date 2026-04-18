@@ -107,16 +107,24 @@ const Portfolio = () => {
     };
   }, []);
 
-  // ANCHOR FIX: scroll to exact pixel position when landing on #projects
+  // ANCHOR FIX: wait for full page load before scrolling
   useEffect(() => {
     if (window.location.hash === "#projects") {
-      setTimeout(() => {
+      const scrollToProjects = () => {
         const el = ref.current;
         if (el) {
           const top = el.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({ top, behavior: "smooth" });
         }
-      }, 500);
+      };
+
+      if (document.readyState === "complete") {
+        setTimeout(scrollToProjects, 100);
+      } else {
+        window.addEventListener("load", () => {
+          setTimeout(scrollToProjects, 100);
+        });
+      }
     }
   }, []);
 
