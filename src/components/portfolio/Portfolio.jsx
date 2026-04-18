@@ -107,25 +107,38 @@ const Portfolio = () => {
     };
   }, []);
 
-  // ANCHOR FIX: wait for full page load before scrolling
+  // ANCHOR FIX: uses ResizeObserver to wait for lazy components to fully mount
   useEffect(() => {
-    if (window.location.hash === "#projects") {
-      const scrollToProjects = () => {
-        const el = ref.current;
-        if (el) {
-          const top = el.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({ top, behavior: "smooth" });
-        }
-      };
+    if (window.location.hash !== "#projects") return;
 
-      if (document.readyState === "complete") {
-        setTimeout(scrollToProjects, 100);
-      } else {
-        window.addEventListener("load", () => {
-          setTimeout(scrollToProjects, 100);
-        });
+    const scrollToProjects = () => {
+      const el = ref.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top, behavior: "smooth" });
+    };
+
+    const observer = new ResizeObserver(() => {
+      const el = ref.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      if (top > window.innerHeight * 1.5) {
+        scrollToProjects();
+        observer.disconnect();
       }
-    }
+    });
+
+    observer.observe(document.body);
+
+    const fallback = setTimeout(() => {
+      scrollToProjects();
+      observer.disconnect();
+    }, 3000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({ target: ref });
