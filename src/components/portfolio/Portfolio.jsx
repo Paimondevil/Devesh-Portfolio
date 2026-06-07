@@ -5,31 +5,31 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 const items = [
   {
     id: 1,
+    img: "/p3.png",
+    title: "Resume Boss: AI Resume Tailor",
+    desc: "An AI-powered resume tailoring engine that takes a job description and produces an ATS-optimized LaTeX resume, real-time ATS score with tier-based keyword analysis, cover letter, and a before/after diff, all in seconds. Built with React, Vite, and Groq's llama-3.3-70b. Live and deployed.",
+    link: "https://bossresume.vercel.app/",
+  },
+  {
+    id: 2,
     img: "/p1.png",
     title: "Traffic Controller: Smart Intersection System",
     desc: "Reimagined traffic flow with a smart 4-way intersection simulator that boosts efficiency by 35% using real-time scheduling (Round Robin & Rate Monotonic). Prioritizes emergency vehicles and pedestrians, reducing delay by 25%. Features a React-powered UI for seamless, visual control and live simulation.",
     link: "https://traffic-controll-neon.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     img: "/p4.png",
     title: "GoodWill Enterprises: Animated Website for a Family-Owned Printing Business",
     desc: "Designed and developed a sleek, animated web presence for a family-run printing company in India. Focused on bold visuals, service highlights, and smooth user interaction to build trust and accessibility. Built with performance and storytelling in mind — combining tradition with tech.",
     link: "https://goodwill-enterprises.vercel.app",
   },
   {
-    id: 3,
+    id: 4,
     img: "/p2.jpg",
     title: "Data Hub: Encrypted File Sharing Platform",
     desc: "Developed a secure file-sharing app that encrypts content using a PIN-based Caesar cipher, enabling controlled access to uploaded files and summaries. Users can upload, lock, and retrieve data with confidence. Features include user authentication, PIN-protected decryption, and a lightweight Flask backend with a custom encryption engine.",
     link: "https://github.com/Paimondevil/Data-Hub",
-  },
-  {
-    id: 4,
-    img: "/p3.jpg",
-    title: "VisualAlgo-Pro: Interactive Algorithm Visualizer 🚧",
-    desc: "Currently building a full-stack platform that brings algorithms to life through interactive visualizations. Designed to help users understand how sorting, searching, and graph algorithms work — in real time. Features animated step-by-step logic flow, user input controls, and a clean Flask + JavaScript stack. Launching soon with support for BFS, DFS, Dijkstra, and more. (Work in Progress 🚧)",
-    link: "https://github.com/Paimondevil/VisualAlgo-Pro",
   },
   {
     id: 5,
